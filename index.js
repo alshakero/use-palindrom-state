@@ -28,15 +28,16 @@ function setupPalindromConnection(options) {
         }
         const mergedOptions = { ...defaultOptions, ...options };
 
-        mergedOptions.onRemoteChange = change => {
-            subscribers.forEach(callback => callback(change));
+        mergedOptions.onRemoteChange = () => {
+            subscribers.forEach(callback => callback());
         };
 
-        mergedOptions.onLocalChange = change => {
-            subscribers.forEach(callback => callback(change));
+        mergedOptions.onLocalChange = () => {
+            subscribers.forEach(callback => callback());
         };
 
         mergedOptions.onStateReset = function(obj) {
+            subscribers.forEach(callback => callback());
             resolve(obj);
         };
         
@@ -55,7 +56,7 @@ function usePalindromState() {
         );
     }
     const [palindromObj, setPalindromObj] = useState(palindromInstance.obj || {});
-    function onUpdate(change) {
+    function onUpdate() {
         setPalindromObj({ ...palindromInstance.obj });
     }
     useEffect(() => {
