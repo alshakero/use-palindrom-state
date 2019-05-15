@@ -17,7 +17,7 @@ Example:
 
 ```js
 import React from 'react';
-import { setupPalindromConnection, usePalindromState } from 'use-palindrom';
+import { setupPalindromConnection, usePalindromState } from 'use-palindrom-state';
 
 const options = {
     remoteUrl: 'http://localhost:8080/palindrom'
