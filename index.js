@@ -12,7 +12,6 @@ const defaultOptions = {
     path: '/',
     devToolsOpen: false,
     fatalErrorReloadAfterS: 5,
-    remoteUrl: 'http://localhost:8080/__default/C4737914BCEDF2DF60000030'
 };
 
 const subscribers = new Set();
