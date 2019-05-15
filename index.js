@@ -54,9 +54,9 @@ function usePalindromState() {
             'Palindrom connection is not setup. Please call setupPalindromConnection and wait for it to resolve first'
         );
     }
-    const [palindromObj] = useState(palindromInstance.obj || {});
+    const [palindromObj, setPalindromObj] = useState(palindromInstance.obj || {});
     function onUpdate(change) {
-        setState({ ...palindromInstance.obj });
+        setPalindromObj({ ...palindromInstance.obj });
     }
     useEffect(() => {
         subscribers.add(onUpdate);
