@@ -1,0 +1,15 @@
+{
+  "name": "use-palindrom-state",
+  "version": "1.0.0",
+  "description": "A React hook for Starcounter's Palindrom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omar Alshaker",
+  "license": "MIT",
+  "dependencies": {
+    "palindrom": "^5.1.0",
+    "react": "^16.8.6"
+  }
+}
