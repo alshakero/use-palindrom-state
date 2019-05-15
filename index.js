@@ -26,7 +26,7 @@ function setupPalindromConnection(options) {
         if (!options.remoteUrl) {
             throw new TypeError('Palindrom: options.remoteUrl is required');
         }
-        const mergedOptions = { ...defaultOptions, options };
+        const mergedOptions = { ...defaultOptions, ...options };
 
         mergedOptions.onRemoteChange = change => {
             subscribers.forEach(callback => callback(change));
